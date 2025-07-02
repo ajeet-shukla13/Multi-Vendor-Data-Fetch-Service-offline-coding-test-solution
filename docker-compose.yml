@@ -1,0 +1,40 @@
+services:
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - mongo
+    volumes:
+      - ./api:/app
+
+  worker:
+    build: ./worker
+    depends_on:
+      - redis
+      - mongo
+    volumes:
+      - ./worker:/app
+
+  sync-vendor:
+    build: ./vendors
+    command: ["python", "sync_vendor.py"]
+    ports:
+      - "9000:9000"
+
+  async-vendor:
+    build: ./vendors
+    command: ["python", "async_vendor.py"]
+    ports:
+      - "9001:9001"
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
