@@ -41,7 +41,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/jobs/dc2fb72b-1155-470b-8960-8da18bea3dcc",
+					"raw": "http://localhost:8000/jobs/06db8b4d-31c4-43e6-afdb-e8386cab8835",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -49,7 +49,7 @@
 					"port": "8000",
 					"path": [
 						"jobs",
-						"dc2fb72b-1155-470b-8960-8da18bea3dcc"
+						"06db8b4d-31c4-43e6-afdb-e8386cab8835"
 					]
 				}
 			},
@@ -106,6 +106,68 @@
 					"port": "8000",
 					"path": [
 						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9001/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ajeet\",\r\n  \"email\": \"ajeet@king.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ajeet\",\r\n  \"email\": \"ajeet@king.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						""
 					]
 				}
 			},

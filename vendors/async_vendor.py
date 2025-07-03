@@ -8,8 +8,8 @@ app = FastAPI()
 @app.post("/")
 async def async_handler(request: Request):
     data = await request.json()
-    request_id = data["request_id"]
-    payload = data["payload"]
+    request_id = data.get("request_id")
+    payload = data.get("payload")
 
     # simulate delay and webhook call
     asyncio.create_task(simulate_webhook(request_id, payload))
