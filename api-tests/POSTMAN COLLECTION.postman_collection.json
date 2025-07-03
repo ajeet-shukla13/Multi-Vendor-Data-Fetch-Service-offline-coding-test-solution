@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "40bfd924-f272-4cef-af3d-93b27fd2ead9",
+		"name": "POSTMAN COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28480528"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/vendor-webhook/async",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"complete\",\r\n    \"result\": {\r\n        \"type\": \"sync\",\r\n        \"name\": \"Ajeet\",\r\n        \"response\": \"sync-done\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/vendor-webhook/async",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"vendor-webhook",
+						"async"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/jobs/dc2fb72b-1155-470b-8960-8da18bea3dcc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/jobs/dc2fb72b-1155-470b-8960-8da18bea3dcc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jobs",
+						"dc2fb72b-1155-470b-8960-8da18bea3dcc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": \"sync\",\r\n  \"name\": \"Ajeet\",\r\n  \"email\": \"ajeet@king.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": \"async\",\r\n  \"name\": \"Ajeet\",\r\n  \"phone\": \"9876543210\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
