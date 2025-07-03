@@ -9,13 +9,13 @@ services:
     volumes:
       - ./api:/app
 
-  worker:
-    build: ./worker
+  background-workers:
+    build: ./background-workers
     depends_on:
       - redis
       - mongo
     volumes:
-      - ./worker:/app
+      - ./background-workers:/app
 
   sync-vendor:
     build: ./vendors
