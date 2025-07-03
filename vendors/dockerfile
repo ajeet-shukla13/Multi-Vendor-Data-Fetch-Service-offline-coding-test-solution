@@ -1,0 +1,10 @@
+FROM python:3.10
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# CMD will be overridden in docker-compose.yml
+CMD ["python", "sync_vendor.py"]
